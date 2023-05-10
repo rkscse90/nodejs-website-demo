@@ -1,8 +1,10 @@
 const express=require('express')
 const hbs=require('hbs')
 const mongoose=require('mongoose')
+const dotenv=require("dotenv");
 
 const app=express()
+dotenv.config();
 
 const routes=require('./routes/main')
 const Detail=require('./models/Detail')
@@ -18,7 +20,7 @@ hbs.registerPartials('views/partials')
 
 //DB Connection
 mongoose.connect(
-    'mongodb://127.0.0.1/website-demo',
+    process.env.DB_CONNECT,
     { useUnifiedTopology: true, useNewUrlParser: true }
   ).then(()=>{
     console.log('DB Successfully Connected')
