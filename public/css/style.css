@@ -7,3 +7,9 @@ body {
   p {
     color: red;
   }
+
+  .slider-image{
+
+    height: 500px !important;
+    object-fit: cover;
+  }

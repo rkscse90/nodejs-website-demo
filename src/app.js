@@ -8,6 +8,7 @@ dotenv.config();
 
 const routes=require('./routes/main')
 const Detail=require('./models/Detail')
+const Slider=require('./models/Slider')
 
 //static/css/style.css
 app.use('/static',express.static('public'))
@@ -24,6 +25,12 @@ mongoose.connect(
     { useUnifiedTopology: true, useNewUrlParser: true }
   ).then(()=>{
     console.log('DB Successfully Connected')
+
+
+
+
+
+
   /*  Detail.create({
       brandName:'Arth Tech Solution',
       brandIconUrl:'http://localhost:4567/static/images/Logo.jpg',
