@@ -11,37 +11,12 @@
     <link rel="stylesheet" href="/static/css/style.css" >
 
 
-    <title>Dynamic Website Using Node js</title>
+    <title>Contact Us Page</title>
   </head>
   <body>
     
     {{>navbar data=detailsView}}
     
-    {{>slider sliderData=sliderView}}
-
-    {{!-- Services Section --}}
-  <section id="services_section" class="py-2">
-    <div class="container">
-      <h1 class="text-center text-secondary" >Services We Offer</h1>
-    <div class="row mt-3">
-      {{!-- first service column --}}
-      {{#each sereviceView}}
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <div class="container text-center">
-                  <i class="{{this.icon}} service_icon"></i>
-                </div>
-                <h3 class="card-title">{{this.title}}</h3>
-                <p>{{this.description}}</p>
-                <a href="{{this.link}}">{{this.linkText}}</a>
-              </div>
-            </div>
-          </div>
-      {{/each}}
-    </div>
-  </section>
-
   {{!-- Contact Us section --}}
 
   <section id="contact-us-id" class="background1"> 
@@ -50,21 +25,21 @@
       <h3  class="text-center text-secondary center-form"> Contact Us </h3>
       <div class="row">
         <div class="col-md-12" >
-            <form >
+            <form action="/app/process-contact-form" method="post">
               <div class="mb-3" > 
                 <label for="exampleInputEmail1" class="form-label">Your Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input name="email", type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
               </div>
 
               <div class="mb-3" >
                 <label for="contact-number" class="form-label">Your Contact Number</label>
-                <input type="number" class="form-control" id="contact-number-id">
+                <input name="mobile" type="number" class="form-control" id="contact-number-id">
               </div>
 
               <div class="mb-3">
                 <label for="queryField" class="form-label">Your Query</label>
-                <textarea style="height: 200px " class="form-control" placeholder="Enter Your Query Here" ></textarea>
+                <textarea name="query" style="height: 200px " class="form-control" placeholder="Enter Your Query Here" ></textarea>
                
               </div>
 
