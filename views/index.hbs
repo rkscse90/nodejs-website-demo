@@ -17,7 +17,27 @@
     
     {{>navbar data=detailsView}}
     
-    {{>slider sliderData=sliderView}}
+    {{!-- {{>slider sliderData=sliderView}} --}}
+
+    {{!-- Banner Section-1 --}}
+
+    <section class="banner_section_1 background1 py-4 text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>
+              Start Learning New Technology Here !!
+            </h1>
+            <p>
+              Sites makes it simple to display your team's work, with easy access to all your content from Google Workspace – whether it's a Drive folder, Doc or even a shared Calendar.
+            </p>
+
+            <button class="btn btn-primary" > Start Learning </button>
+
+          </div>
+        </div>
+      </div>
+    </section>
 
     {{!-- Services Section --}}
   <section id="services_section" class="py-2">
@@ -42,9 +62,55 @@
     </div>
   </section>
 
+  {{!-- Banner_section_2 --}}
+
+  <section class="banner2_section text-center py-3 " >
+    <div class="conatiner">
+      <div class="row">
+        <div class="col-md-6 pt-5 "  > 
+            {{!-- Left Side --}}
+            <h3>We work for Masses, Not for money</h3>
+            <p>
+              Creation and editing is extremely simple: just click, drag or drop. The design will be rearranged automatically with a grid layout. Everything fits into the best place, and is simple to move, resize or rearrange.
+            </p>
+             <button class="btn btn-primary" > Click Here </button>
+        </div>
+         <div class="col-md-6">
+          {{!-- Right Side --}}
+          <img src="/static/images/pic5.jpg"  alt="" style="height: 250px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{!-- Banner_section_3 --}}
+
+  <section class="banner3_section text-center py-3 " >
+    <div class="conatiner">
+      <div class="row">
+
+        <div class="col-md-6">
+          {{!-- Left  Side --}}
+          <img src="/static/images/pic6.jpg"  class="img-fluid" alt="" style="height: 250px;">
+        </div>
+
+        <div class="col-md-6 pt-5 "  > 
+            {{!-- Right Side --}}
+            <h3>We work for People </h3>
+            <p>
+              Creation and editing is extremely simple: just click, drag or drop. The design will be rearranged automatically with a grid layout. Everything fits into the best place, and is simple to move, resize or rearrange.
+            </p>
+             <button class="btn btn-primary" > Click Here </button>
+        </div>
+         
+      </div>
+    </div>
+  </section>
+
+
   {{!-- Contact Us section --}}
 
-  <section id="contact-us-id" class="background1"> 
+  <section id="contact_us_id" class="background1"> 
 
     <div class="conatiner center-form" >
       <h3  class="text-center text-secondary center-form"> Contact Us </h3>
@@ -77,6 +143,39 @@
       </div>
     </div>
   </section>
+
+  {{!-- About Section --}}
+
+<section class="about_section py-3 text-center ">
+  <div class="conatiner">
+    <div class="row">
+
+      <div class="col-md-12">
+        <h3> About this Website</h3>
+        <p>
+          Web design is the process of planning, conceptualizing, and arranging content online. Today, designing a website goes beyond aesthetics to include the website's overall functionality. Web design also includes web apps, mobile apps, and user interface design
+        </p>
+        <button class="btn btn-success" >
+          Contact Us
+        </button>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+<footer class="footer text-center">
+
+  <div class="conatainer">
+    <div class="row">
+      <div class="col-md-12">
+        @2023 Copyright: <span>Arth Technology</Span>
+      </div>
+    </div>
+  </div>
+
+</footer>
+  
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

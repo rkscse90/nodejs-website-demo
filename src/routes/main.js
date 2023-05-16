@@ -62,7 +62,7 @@ routes.post('/process-contact-form', async (req,res)=>{
 
     try{
 
-        const data=Contact.create(req.body)
+        const data= await Contact.create(req.body)
         console.log('Body :',req.body)
         
         res.redirect("/app/getMessage")
