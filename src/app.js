@@ -11,6 +11,7 @@ const routes=require('./routes/main')
 const Detail=require('./models/Detail')
 const Slider=require('./models/Slider')
 const Service=require('./models/Service')
+const UserData=require('./models/User')
 
 //static/css/style.css
 app.use(bodyParser.urlencoded({
@@ -20,7 +21,9 @@ app.use('/static',express.static('public'))
 
 app.use('/app',routes)
 
+
 //(template engine)
+app.use(express.json())
 app.set('view engine','hbs')
 app.set('views','views')
 hbs.registerPartials('views/partials')
@@ -113,7 +116,7 @@ mongoose.connect(
   .catch((err)=>{
     console.error('Failed to connect->'+err)
   });
-  
+
 
 app.listen(process.env.PORT | 4567,()=>{
     console.log("Server started at PORT: 4567")

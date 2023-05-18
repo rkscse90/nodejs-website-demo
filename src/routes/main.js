@@ -5,6 +5,7 @@ const Detail=require('../models/Detail')
 const Slider=require('../models/Slider')
 const Serevice=require('../models/Service')
 const Contact=require('../models/Contact')
+const UserData=require('../models/User')
 
 routes.get('/getMessage', async (req,res)=>{
 
@@ -75,6 +76,33 @@ routes.post('/process-contact-form', async (req,res)=>{
 
     }
 })
+
+
+routes.get("/login",(req,res)=>{
+    res.render("login")
+  })
+
+routes.get("/signup",(req,res)=>{
+    res.render("signup")
+  })
+
+routes.post("/signup-form",async (req,res)=>{
+
+    // const data={
+    //   name:req.body.userName,
+    //   password:req.body.password
+    // }
+    // await UserData.insertMany([data])
+    console.log("SIgnup Form Submitted",req.body)
+
+    const data= await UserData.create(req.body)
+
+    console.log('User data Processed->',req.body)
+    
+    res.render("home")
+
+  })
+
 
 
 module.exports=routes
